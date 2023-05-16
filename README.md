@@ -42,3 +42,4 @@ Inicie o servidor
 ## Demo
 
 ![2023-05-16-16-18-58](https://github.com/igorcossta/sudokugame/assets/65612587/4f9ac670-be21-4cb0-92f4-9d9a11e71af2)
+[Live](https://igorcossta.github.io/sudokugame/)
