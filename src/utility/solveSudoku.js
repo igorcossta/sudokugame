@@ -24,7 +24,6 @@ const isValidNode = (row, col, value, board) => {
 };
 
 const solveSudoku = (board) => {
- //   console.log(board);
  for (let i = 0; i < 9; i++) {
   for (let j = 0; j < 9; j++) {
    if (board[i][j].value === 0) {

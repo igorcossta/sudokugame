@@ -34,7 +34,6 @@ const isBoxValid = (board, x0, y0) => {
    if (Object.hasOwnProperty.call(dict, key)) {
     dict[key] += 1;
     if (dict[key] > 1) {
-     console.log(x0, y0);
      return false;
     }
    } else dict[key] = 1;
@@ -89,9 +88,6 @@ const checkBoard = (board) => {
  let wrongHorizontal = getWrongLines(board, 'horizontal');
  let wrongVertical = getWrongLines(board, 'vertical');
  let wrongBoxes = getWrongBoxes(board);
-
- console.log(getBoxNumber(1, 5));
- console.log(wrongBoxes);
 
  for (let i = 0; i < 9; i++) {
   for (let j = 0; j < 9; j++) {

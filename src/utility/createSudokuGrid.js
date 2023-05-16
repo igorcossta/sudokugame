@@ -24,7 +24,6 @@ const isValidNode = (row, col, value, board) => {
 };
 
 const countSudokuSolution = (board) => {
- //   console.log(board);
  for (let i = 0; i < 9; i++) {
   for (let j = 0; j < 9; j++) {
    if (board[i][j] === 0) {
@@ -44,7 +43,6 @@ const countSudokuSolution = (board) => {
 };
 
 const solveRandomSudoku = (board) => {
- //   console.log(board);
  for (let i = 0; i < 9; i++) {
   for (let j = 0; j < 9; j++) {
    if (board[i][j] === 0) {
@@ -63,7 +61,7 @@ const solveRandomSudoku = (board) => {
  return true;
 };
 
-const getSudokuGrid = (maxEmptyCellsCount) => {
+export const getSudokuGrid = (maxEmptyCellsCount) => {
  let sudokuGrid = [
   [0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -79,14 +77,6 @@ const getSudokuGrid = (maxEmptyCellsCount) => {
  ];
 
  solveRandomSudoku(sudokuGrid);
-
- // The method was not having
- // let emptyPositions = 81;
- // for (let i = 0; i <emptyPositions; i++) {
- //   let row = Math.floor(Math.random() * 9);
- //   let col = Math.floor(Math.random() * 9);
- //   sudokuGrid[row][col] = 0;
- // }
 
  // The min number of filled cell, so that unique solution exists is 17
  let emptyCells = 0;

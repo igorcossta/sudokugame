@@ -95,11 +95,11 @@ const Game = () => {
    setIsPlayerWon(true);
   }
 
-  // setting the value to the grid and also to the local storage
+  // setting the value to the grid
   setGrid(newGrid);
  };
 
- // If we donot have anything in the local storage
+ // if game is not started
  if (grid == null && startingGrid == null) handleNewGame(gameMode);
 
  return (
