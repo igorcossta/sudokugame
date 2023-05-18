@@ -4,7 +4,7 @@
 Jogo de quebra-cabeça feito em React.
 
 
-## Rodar Localmente
+## Rodar Localmente FrontEnd
 
 Clone o projeto
 
@@ -28,6 +28,28 @@ Inicie o servidor
 
 ```bash
   npm run dev
+```
+## Rodar Localmente Server
+
+```bash
+  git clone https://github.com/igorcossta/sudokugame-server.git
+```
+Vá até o diretório do projeto
+
+```bash
+  cd sudokugame-server
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Inicie o servidor
+
+```bash
+  node app.js
 ```
 
 
