@@ -5,10 +5,10 @@ import {
  checkBoard,
  checkPlayerWon,
  createSudokuGrid,
- solveSudoku,
 } from '../../utility';
 import { AiOutlineCheck, AiOutlineClear } from 'react-icons/ai';
 import { RiRestartLine } from 'react-icons/ri';
+import axios from 'axios';
 
 const hardMaxEmptyCells = 50;
 
@@ -29,8 +29,12 @@ const Game = () => {
   useState(false);
 
  const handleSolve = () => {
-  let solvedBoard = arrayDeepCopy(grid);
-  let solvedStatus = solveSudoku(solvedBoard);
+  axios.post('http://localhost:8080/solve', { board: grid }).then((res) => {
+   handleServerSudoku(res.data.status, res.data.sudoku);
+  });
+ };
+
+ const handleServerSudoku = (solvedStatus, solvedBoard) => {
   if (solvedStatus === false) {
    setShowNoSolutionFoundModal((show) => !show);
    return;
